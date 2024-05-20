@@ -1,0 +1,93 @@
+sep {display:inline-block; min-width:16px; width:16px;}
+* {color-scheme:dark !important;font-family:"Rubik", sans-serif;}
+nav * {display:inline-block;}
+nav {z-index:9999999999999999;}
+avatar {height:32px;width:32px;background-image:url('assets/logo-prod-ds.png');display:inline-block;border-radius:9999px;background-size:contain;}
+.hero {height:99svh;background-image:url('../images/hero.jpg');background-size:cover;}
+.jumbo {font-size:40px;font-weight:800;}
+.color_b {
+    background: linear-gradient(197deg, rgb(138,173,244) 29%, rgb(30,102,245) 83%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.color_g {
+    background: linear-gradient(197deg, rgb(245,169,127) 29%, rgb(236,133,80) 83%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+@keyframes slidein {
+    from {
+        opacity:0; margin-left: -8svw;
+    }
+    to {opacity:1; margin-left:0svw;}
+}
+@keyframes slideinr {
+    from {
+        opacity:0; margin-right: 8svw;
+    }
+    to {opacity:1; margin-right:0svw;}
+}
+@keyframes fadein {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@keyframes fadeinc {
+    from {opacity:0;max-height:0px;height:0px;}
+    to {opacity:1;max-height:9000px;height:fit-content;}
+}
+
+@keyframes slidedown {
+    from {opacity:0;margin-bottom:64px;}
+    to {opacity:1;margin-bottom:0px;}
+}
+@keyframes blink {
+    0% {opacity:0;}
+    45%{opacity:0;}
+    50%{opacity:1;}
+    95%{opacity:1;}
+    100%{opacity:0;}
+}
+.bottom_hero {background-image:url("../images/bottom-hero.jpg");background-size:cover;background-attachment: fixed;backdrop-filter:blur(6px)}
+.text_slidein * {animation: 1.8s slidein forwards;  margin-left: -8svw; animation-delay:0.6s; opacity:0;}
+.text_slideinr * {animation: 1.8s slideinr forwards;  margin-right: 8svw; animation-delay:0.6s; opacity:0;}
+.content_revealing {animation: 0.5s fadeinc forwards !important; animation-delay:0.2s !important;opacity:0;max-height:0px;}
+.text_fadein {animation: 1.3s fadein forwards; animation-delay:0s; opacity:0;}
+.ch_fadein {animation: 1.3s fadein forwards !important; animation-delay:4.5s !important; opacity:0;}
+.hero_content_slidedown {animation: 1s slidedown forwards; animation-delay:2.5s;  opacity:0;}
+.hero_content_slidedown.small_delay {animation: 1s slidedown forwards; animation-delay:0.4s;  opacity:0;}
+.text_blink {animation: 1s blink infinite; font-family:monospace;}
+blockquote {background:rgba(0,0,0,0.15);border-left:3px solid #8caaee;padding-left:6px; 
+    border-top-left-radius: 4px;border-bottom-left-radius: 4px; width:max-content; padding-right:32px;}
+.blockquote-bad {border-left-color:#e78284 !important;}
+spoiler {padding-left:5px; padding-right:5px; padding-top:2px; padding-bottom:2px; border-radius:4px; background:#181926; transition: all 0.35s;}
+spoiler * {opacity:0.2; filter:blur(5px);transition: all 0.35s;}
+spoiler:hover {background:rgba(24, 25, 38,0.3);transition: all 0.35s;}
+spoiler:hover * {opacity:1;transition: all 0.35s;filter:blur(0px);}
+li {margin-bottom:8px; word-wrap: break-word;}
+li * {word-wrap: break-word; word-break: break-all;}
+pre, code {break-inside: avoid;word-break: keep-all;line-break: loose; padding:2px 6px;overflow-x:auto; background:rgb(var(--ctp-crust));border-radius:5px;}
+@keyframes goDownPlease {
+    0% {position:relative;top:-4px;}
+    50% {position:relative;top:24px;}
+    100% {position:relative;top:-4px;}
+}
+.text_godownplease {animation:2.33s goDownPlease infinite;opacity:0.67;}
+* {margin:0;}
+html, body {width:100% !important;height:100vh;display:block;}
+
+body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgba(22, 78, 99);backdrop-filter:blur(8px);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(2, 132, 199);    /* color of the scroll thumb */
+    border-radius: 4px;       /* roundness of the scroll thumb */
+    border: 2px solid rgba(22, 78, 99);  /* creates padding around scroll thumb */
+  }
+  
